@@ -3,9 +3,6 @@ const cards = document.querySelector('.cards')
 const card = document.querySelectorAll('.card')
 const flipCard = document.querySelectorAll('flipCard')
 const btnEndGame = document.querySelector('#btnEndGame')
-// const songMatch = new Audio('./songs/match.wav')
-// const songFlipCard = new Audio('./songs/flipCard.wav')
-// const songEndGame = new Audio('./songs/end-game.wav')
 
 //Para controlar a modal endGame
 var modalEndGame = document.querySelector('#modalEndGame')
