@@ -9,17 +9,20 @@ var modalEndGame = document.querySelector('#modalEndGame')
 modalEndGame.style.display = 'none';
 var imgMatch = document.querySelector('#imgMatch')
 
+
 //Arrays com os sons
 const songs = [
     './songs/match.wav',
     './songs/flip-card.wav',
-    './songs/end-game.wav'
+    './songs/end-game.wav',
+    './songs/error.wav',
+    './songs/click.wav'
 ]
 
-const paySong = (key) => {
-    var som = document.getElementById("audio");
-    som.src = songs[key];
-    som.play();
+const playSong = (key) => {
+    let song = document.getElementById("audio");
+    song.src = songs[key];
+    song.play();
 }
 
 //verificar os acerto
@@ -103,7 +106,7 @@ const rotateCard = (ev) => {
 
         if (rotateCards.length < 2) {
 
-            paySong(1)
+            playSong(1)
 
             if (child != false) {
                 if (child.classList.length > 1) {
@@ -121,12 +124,25 @@ const rotateCard = (ev) => {
             rotateCards.push(elCard);
             clickCard.push(imgCard);
 
+            if (clickCard.length == 2 && !calculateResult(clickCard[0], clickCard[1])) {
+                setTimeout(function () {
+                    playSong(3)
+                    rotateCards[0].classList.remove('hover')
+                    rotateCards[1].classList.remove('hover')
+                    rotateCards = [];
+                    clickCard = [];
+                }, 500);
+            }
+
+
             if (clickCard.length == 2) {
+
                 if (calculateResult(clickCard[0], clickCard[1])) {
+
                     rotateCards[0].parentNode.classList.add('match')
                     rotateCards[1].parentNode.classList.add('match')
 
-                    paySong(0)
+                    playSong(0)
                     hitCardCombination();
                     hits++;
 
@@ -135,14 +151,14 @@ const rotateCard = (ev) => {
 
                     if (hits === 6) {
                         endGame();
-                        paySong(2)
+                        playSong(2)
                     }
                 }
             }
 
         } else {
 
-            paySong(1)
+            playSong(1)
             rotateCards[0].classList.toggle('hover')
             rotateCards[1].classList.toggle('hover')
 
