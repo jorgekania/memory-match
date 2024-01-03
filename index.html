@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Memory Match</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <audio id="audio" src=""></audio>
     <div class="container">
-        <img src="./images/match.webp" id="imgMatchTtile">
-        <div class="cards">
-            <div class="card" id="0"></div>
-            <div class="card" id="1"></div>
-            <div class="card" id="2"></div>
-            <div class="card" id="3"></div>
-            <div class="card" id="4"></div>
-            <div class="card" id="5"></div>
-            <div class="card" id="6"></div>
-            <div class="card" id="7"></div>
-            <div class="card" id="8"></div>
-            <div class="card" id="9"></div>
-            <div class="card" id="10"></div>
-            <div class="card" id="11"></div>
+      <img src="./images/match.webp" id="imgMatchTtile" title="Memory Mach" />
+      <div id="settings">
+        <button type="button" id="btnManualStart">JOGAR</button>
+        <div id="timer">
+          Memorize as Cartas: <span id="timerElement">5</span> seg.
         </div>
-        <img src="./images/match.webp" id="imgMatch">
+        <div id="errors">
+          Escolhas Erradas: <span id="countErrorsElement">0</span>/<span
+            id="maxErrorsElement"
+            >0</span
+          >
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card" id="0">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="1">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="2">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="3">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="4">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="5">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="6">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="7">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="8">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="9">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="10">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="11">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="12">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="13">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="14">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="15">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="16">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="17">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="18">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="19">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="20">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="21">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="22">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+        <div class="card" id="23">
+          <img src="./images/avengers.png" alt="Memory Match" />
+        </div>
+      </div>
+      <img src="./images/match.webp" id="imgMatch" alt="Memory Match" />
     </div>
-    
+
     <div id="modalEndGame">
-        <img id="endGame" src="./images/end-game.jpeg" alt="">
-        <button id="btnEndGame">JOGAR NOVAMENTE</button>
+      <img id="endGame" src="./images/end-game.jpeg" alt="" />
+      <div id="btnsModal">
+        <button type="button" id="btnEndGame">JOGAR NOVAMENTE</button>
+        <button type="button" id="btnCloseModal">FECHAR MODAL</button>
+      </div>
+    </div>
+
+    <div id="modalEndGameErrors">
+      <img id="endGameErrors" src="./images/end-game.jpeg" alt="" />
+      <div id="txtErros">QUE PENA. VOCÊ PERDEU</div>
+      <div id="btnsModalErrors">
+        <button type="button" id="btnEndGameErrors">JOGAR NOVAMENTE</button>
+        <button type="button" id="btnCloseModalErrors">FECHAR MODAL</button>
+      </div>
     </div>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
