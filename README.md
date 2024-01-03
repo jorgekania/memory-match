@@ -3,6 +3,8 @@
 
 Esta documentação fornece uma visão geral dos arquivos e da estrutura de código para o jogo "Memory Match". O jogo é implementado usando HTML, CSS e JavaScript.
 
+![Memory Mach](https://photos.app.goo.gl/Z9CpQxNQjYxfXrUb7)
+
 ## Arquivos
 
 ### 1. `index.html`
