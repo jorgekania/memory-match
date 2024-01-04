@@ -76,11 +76,12 @@ Este arquivo CSS define os estilos para o jogo Memory Match, incluindo layout, c
 ## Implementações que podem ainda serem feitas
 
 1.  Criar um sistema de pontuação
-2.  Salvar o sistema de pontos do jogador
-3.  Salvar o melhor tempo do jogador
-4.  Salvar a melhor pontuação do jogador
-5.  Tornar o jogo responsivo
-6.  Levar o jogo para Node.js podendo usar um framework como React.js e TailwindCSS
+2.  Otimizar o tamanho das imagens
+3.  Salvar o sistema de pontos do jogador
+4.  Salvar o melhor tempo do jogador
+5.  Salvar a melhor pontuação do jogador
+6.  Tornar o jogo responsivo
+7.  Levar o jogo para Node.js podendo usar um framework como React.js e TailwindCSS
 
 Divirta-se jogando o Memory Match!
 Contribua com o jogo melhorando-o
