@@ -4,6 +4,7 @@
 Esta documentação fornece uma visão geral dos arquivos e da estrutura de código para o jogo "Memory Match". O jogo é implementado usando HTML, CSS e JavaScript.
 
 ![Memory Mach](https://github.com/jorgekania/memory-match/blob/jk/images/screnshot-game.png)
+![Memory Mach](https://github.com/jorgekania/memory-match/blob/jk/images/screnshot-game-2.png)
 
 ## Arquivos
 
