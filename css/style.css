@@ -1,7 +1,12 @@
 body, html {
     margin: 0;
     padding: 0;
-    background: #240128;
+    background: #030c07;
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -10,45 +15,70 @@ body, html {
     width: 1290px;
     margin: 0 auto;
 }
-#imgMatchTtile{
-    width: 556px;
-    margin-left: auto;
-    margin-right: auto;
+#logo{
+    margin: 35px auto;
+    width: 566px;
+    height: 142px;
+    background-image: url("../images/logo-memory-match.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #settings{
     display: flex;
     justify-content: space-evenly;
-    padding: 20px 40px;
-    font-size: 26px;    
+    align-items: center;
+    margin: 0 40px 40px;
+    font-size: 20px;    
 }
 
-#settings #timer{
-    color: #32d10a;
-    margin: 0 0 20px 0;
+#settings i{
+    margin: 0 10px 0 0;
 }
+
+#settings #currentTime{
+    width: 25%;
+    color: #00c355;
+    margin: 0 0 20px 0;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#settings #hits{
+    width: 25%;
+    color: #00c355;
+    margin: 0 0 20px 0;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 #settings #errors{
-    color: #d10a0a;
+    width: 25%;
+    color: #00c355;
     margin: 0 0 20px 0;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 15px;
 }
 
-h1{
-    font-size: 35px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#settings #currentTimeElement{
     font-weight: 900;
-    text-align: center;
+    color: #0bf503;
 }
+
 .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background: rgb(86 2 51);
-    border: 1px solid #000;
+    align-items: center;    
+    border: 1px solid #073812;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    box-shadow: rgb(182 35 214) 0 0 15px 1px;
+    box-shadow: #0ac25d 0 0 15px 1px;
 }
 .card{
     display: flex;
@@ -155,13 +185,35 @@ h1{
     color: #ffffff;
 }
 #btnManualStart{
+    width: 25%;
+    margin: 0 auto 40px;
     border-radius: 15px;
-    background-color: #81abf9;
-    padding: 0 15px;
-    font-weight: 900;
+    background-color: #5b8a57;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    font-weight: bold;
     font-size: 14px;
-    color: #041636;
+    color: #f7f7f7;
     cursor: pointer;
+    border: 1px solid #81f9b7;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.btnManualStartPlaying{
+    background-color: #57608a !important;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%) !important;
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #8981f9 !important;
+}
+#btnManualStart i{
+    margin: 0 10px 0 0;
+}
+#btnManualStart:hover{
+    background-color: #0ac25d;
+    box-shadow: rgba(104, 241, 177, 0.8) 0 0 5px 1px;
+    border: 1px solid #81f9b7;
 }
 #endGame{
     width: 65%;
@@ -177,12 +229,12 @@ h1{
     transition-property: top, opacity;
     transition-duration: 2.5s;
     z-index: 1;    
-    box-shadow: rgba(241, 104, 104, 0.8) 0 0 15px 15px;
+    box-shadow: rgba(226, 126, 126, 0.8) 0 0 15px 15px;
 }
 .hover, .match{
-    border: 2px solid #81abf9;
-    background-color: rgba(177, 177, 177, 0.8);
-    box-shadow: rgb(104 120 241 / 80%) 0 0 5px 1px;
+    border: 2px solid #81f9b7;
+    background-color: rgba(117, 153, 122, 0.8);
+    box-shadow: rgba(104, 241, 177, 0.8) 0 0 5px 1px;
 }
 
 #imgMatch{

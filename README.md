@@ -27,8 +27,13 @@ Este arquivo JavaScript contém a lógica para o jogo Memory Match. Ele lida com
 -   **Declarações de Variáveis:** Define variáveis para armazenar vários elementos e estado do jogo.
 -   **Constantes:** Define constantes para o valor inicial do temporizador, erros máximos e atraso de reprodução.
 -   **Ouvintes de Eventos:** Configura ouvintes de eventos para cliques em botões e viradas de cartas.
+-   **Listas:**
+    -   `songs`: Lista de sons a serem executados durante o jogo.
+    -   `combinations`: Lista de combinações possíveis das cartas.
 -   **Funções:**
+    -   `createCards()`: Cria a listagem de cartas iniciais na tela.
     -   `playSong(key)`: Reproduz um arquivo de áudio específico com base na chave fornecida.
+    -   `updateCurrentTime()`: Atualiza o tempo decorrido do jogo atual.
     -   `calculateResult(cardOne, cardTwo)`: Verifica se as cartas selecionadas formam um par correspondente.
     -   `configureCard(index, addHoverClass)`: Configura elementos de cartas com efeitos de hover.
     -   `showAllCards()`: Exibe todas as cartas brevemente no início do jogo.
@@ -42,7 +47,6 @@ Este arquivo JavaScript contém a lógica para o jogo Memory Match. Ele lida com
     -   `rotateCard(ev)`: Manipula rotações e interações de cartas.
     -   `endGame()`: Encerra o jogo, exibe modais e lida com cenários de fim de jogo.
     -   `restartGame()`: Reinicia o jogo após clicar nos botões dos modais.
-    -   `hitCardCombination()`: Anima uma combinação de cartas correspondentes.
 
 ### 3. `style.css`
 
@@ -68,4 +72,14 @@ Este arquivo CSS define os estilos para o jogo Memory Match, incluindo layout, c
 5.  Evite exceder o número máximo de erros permitidos.
 6.  Complete o jogo combinando todos os pares ou enfrente o fim do jogo se os erros atingirem o limite.
 
+## Implementações que podem ainda serem feitas
+
+1.  Criar um sistema de pontuação
+2.  Salvar o sistema de pontos do jogador
+3.  Salvar o melhor tempo do jogador
+4.  Salvar a melhor pontuação do jogador
+5.  Tornar o jogo responsivo
+6.  Levar o jogo para Node.js podendo usar um framework como React.js e TailwindCSS
+
 Divirta-se jogando o Memory Match!
+Contribua com o jogo melhorando-o
